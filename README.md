@@ -1,2 +1,2 @@
 # loop
-fast api boilerplate
+FastAPI boilerplate
