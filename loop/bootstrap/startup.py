@@ -19,16 +19,16 @@ async def startup():
     await app.configure()
 
 register_tortoise(
-        app,
-        config={
-            "connections": {"default": config.config.WRITER_DB_URL},
-            "apps": {
-                "models": {
-                    "models": ["loop.app.models.user"],
-                    "default_connection": "default",
-                }
-            },
+    app,
+    config={
+        "connections": {"default": config.config.WRITER_DB_URL},
+        "apps": {
+            "models": {
+                "models": ["loop.app.models.user"],
+                "default_connection": "default",
+            }
         },
-        generate_schemas=True,
-        add_exception_handlers=True,
-    )
+    },
+    generate_schemas=True,
+    add_exception_handlers=True,
+)
